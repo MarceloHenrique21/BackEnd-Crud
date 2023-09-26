@@ -1,1 +1,4 @@
-export class Destino {}
+export class Destino {
+    id: number
+    nome: string;
+}

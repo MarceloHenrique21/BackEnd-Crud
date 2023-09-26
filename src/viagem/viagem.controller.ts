@@ -18,17 +18,17 @@ export class ViagemController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.viagemService.findOne(+id);
+  findOne(@Param('id') id: number) {
+    return this.viagemService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateViagemDto: UpdateViagemDto) {
-    return this.viagemService.update(+id, updateViagemDto);
+  update(@Param('id') id: number, @Body() updateViagemDto: UpdateViagemDto) {
+    return this.viagemService.update(id, updateViagemDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.viagemService.remove(+id);
+  remove(@Param('id') id: number) {
+    return this.viagemService.remove(id);
   }
 }
